@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>color changer</title>
+      <style>
+            .container {
+                 
+                  margin-top: 100px;
+                  display: grid;
+                  place-content: center;
+            }
+            .box{
+                  width: 320px;
+                  height: 300px;
+                  border: 1px solid black;
+                  transition: all 0.4s ease;
+            }
+            .input {
+                  width: 300px;
+                  height: 50px;
+                  border-radius: 5px;
+                  font-size: 1.5rem;
+                  padding-left: 20px;
+                  font-weight: bold;
+            }
+
+
+
+
+
+
+
+            /*  main style */
+
+            .main {
+                  width: 100%;
+                  border: 1px solid black;
+                  display: flex;
+                  justify-content: center;
+            }
+
+            .row {
+                  width: 150px;
+                  height: 40px;
+                  border: 1px solid black;
+            }
+      </style>
+</head>
+<body>
+      
+      <div class="container">
+            <div class="box"></div>
+            <br>
+            <input type="text" class="input" placeholder="borderRadius / color">
+      </div>
+</body>
+
+      <script>
+            const box = document.querySelector('.box');
+            const inputField = document.querySelector('.input');
+
+
+            inputField.addEventListener('input', ()=>{
+                  box.style.borderRadius = inputField.value;
+                  box.style.background = inputField.value;
+      
+            });
+      </script>
+</html>
